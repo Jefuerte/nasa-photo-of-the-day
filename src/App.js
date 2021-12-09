@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios';
 import MyNasaCard from './components/MyNasaCard';
 
+
 function App() {
   const [nasa, setNasa] = useState([])
   useEffect(() => {
@@ -13,10 +14,16 @@ function App() {
     .catch(err => console.error(err));
   }, [])
     
+
+  
+
+
   return (
-    <div className="App">
-      {nasa && <MyNasaCard data = {nasa} />}
+    
+    <div className ="App">
+      {nasa && <MyNasaCard data = {nasa} />}  
     </div>
+    
   );
 }
 
